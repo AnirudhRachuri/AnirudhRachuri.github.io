@@ -1,8 +1,8 @@
 {
   "auth.endpoint.uri": "https://authserver/v1/auth",
-  "job.timeout": 3600,
+  "job.timeout": 3610,
   "sns.broadcast.topic_name": "broadcast",
   "score.factor": 2.4,
   "jpa.showSql": false,
-  "aws_region_id": "us-east-1"
+  "aws_region_id": "us-west-1"
 }
