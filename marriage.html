@@ -17,7 +17,7 @@
     }
     .scroll-down-btn {
       position: absolute;
-      bottom: 20px;
+      bottom: 15%;
       left: 50%;
       transform: translateX(-50%);
       background-color: rgba(0, 0, 0, 0.6);
@@ -26,6 +26,11 @@
       padding: 10px 20px;
       border-radius: 30px;
       display: none;
+      animation: scroll-flash 3s linear infinite;
+    }
+    @keyframes scroll-flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.1; }
     }
     @media (max-width: 767.98px) {
       .scroll-down-btn {
@@ -66,27 +71,16 @@
     <div class="row gx-0">
       <!-- Image Slideshow Column -->
       <div class="col-md-6 position-relative vh-100-all">
-        <div id="weddingCarousel" class="carousel slide h-100" data-bs-ride="carousel">
-          <div class="carousel-inner h-100">
-            <div class="carousel-item active h-100">
-              <img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
-            </div>
-            <div class="carousel-item h-100">
-              <img src="marriage_images/image2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
-            </div>
-            <div class="carousel-item h-100">
-              <img src="marriage_images/image3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="...">
-            </div>
+        <!-- Title overlay for mobile -->
+        <div class="d-block d-md-none position-absolute top-0 start-0 w-100 text-center" style="background:rgba(0,0,0,0.5);color:#fff;padding:1.2rem 0 0.7rem 0;z-index:2;">
+          <div style="font-family: cursive; font-size: 2rem; font-weight: bold; letter-spacing: 1px;">
+            Wedding Invitation
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#weddingCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#weddingCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="false"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <!-- <div style="font-size: 1.1rem; margin-top: 0.5rem;">
+            Chi. Anirudh &amp; Chi. La. Sow. Chaitra
+          </div> -->
         </div>
+        <img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding" style="position: absolute; top: 0; left: 0;" id="mainWeddingImage">
         <button class="scroll-down-btn" onclick="document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });">
           Scroll Down ↓
         </button>
@@ -103,8 +97,7 @@
             </div>
             <h1 class="display-5" style="color: #008060; font-family: cursive;">Wedding Invitation</h1>
             <p class="mt-3" style="font-size: 1.1rem;">
-              We solicit your gracious presence with family and friends on<br>
-              the auspicious occasion of the marriage of our elder son
+              We solicit your gracious presence with family and friends on the auspicious occasion of the marriage of our elder son
             </p>
             <h2 class="my-3" style="color: #008060; font-family: cursive;">Chi. Anirudh</h2>
             <span style="font-size: 1.2rem;">with</span>
@@ -122,7 +115,7 @@
               Hastha Nakshatram, "Mithuna Lagna"
             </div>
             <div class="mt-2">
-              <span style="color: #008060; font-weight: bold;">Venue :</span><br>
+              <span style="color: #800000; font-weight: bold;">Venue :</span><br>
               <b>Akshatha Hall - Bon Tadka</b><br>
               Gandhi Nagar, Bangalore
             </div>
@@ -154,7 +147,7 @@
             </div>
           </div>
 
-          <div class="text-center mb-3" style="font-size: 1.1rem;">
+          <div class="text-center mb-3" style="color: #008060; font-size: 1.1rem;">
             <b>Sri Rachuri Rama Krishna Rao<br>Smt. Nirmala</b>
           </div>
           <div class="text-center" style="font-size: 1rem;">
@@ -166,5 +159,15 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Auto-scroll after image loads and 2s delay
+    console.log('Image loading...');
+    document.getElementById('mainWeddingImage').addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });
+        console.log('Image loaded and scrolled to info section');
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
