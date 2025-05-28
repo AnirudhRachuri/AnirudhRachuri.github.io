@@ -80,7 +80,10 @@
             Chi. Anirudh &amp; Chi. La. Sow. Chaitra
           </div> -->
         </div>
-        <img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding" style="position: absolute; top: 0; left: 0;" id="mainWeddingImage">
+        <img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" 
+          alt="Wedding" style="position: absolute; top: 0; left: 0;" id="mainWeddingImage"
+          onload="setTimeout(function(){document.getElementById('infoSection').scrollIntoView({ 
+          behavior: 'smooth' });}, 2000);">
         <button class="scroll-down-btn" onclick="document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });">
           Scroll Down ↓
         </button>
@@ -97,11 +100,13 @@
             </div>
             <h1 class="display-5" style="color: #008060; font-family: cursive;">Wedding Invitation</h1>
             <p class="mt-3" style="font-size: 1.1rem;">
-              We solicit your gracious presence with family and friends on the auspicious occasion of the marriage of our elder son
+                We solicit your gracious presence with family and friends
+                <span class="d-none d-md-inline"><br></span>
+                on the auspicious occasion of the marriage of our elder son
             </p>
-            <h2 class="my-3" style="color: #008060; font-family: cursive;">Chi. Anirudh</h2>
+            <h2 class="my-3" style="color: #008060; font-family: cursive;"><b>Chi. Anirudh</b></h2>
             <span style="font-size: 1.2rem;">with</span>
-            <h2 class="my-3" style="color: #008060; font-family: cursive;">Chi. La. Sow. Chaitra</h2>
+            <h2 class="my-3" style="color: #008060; font-family: cursive;"><b>Chi. La. Sow. Chaitra</b></h2>
             <div style="font-size: 1rem;">
               (Only D/o. Sri Balaji Thirupathi Ashwathanarayana,<br>
               Smt. Geetha Vanishree Thirupathi Balaji, Bangalore)
@@ -116,7 +121,11 @@
             </div>
             <div class="mt-2">
               <span style="color: #800000; font-weight: bold;">Venue :</span><br>
-              <b>Akshatha Hall - Bon Tadka</b><br>
+              <b>
+                <a href="https://maps.app.goo.gl/inCg4f621NahnH1z9?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                  Akshatha Hall - Bon Tadka
+                </a>
+              </b><br>
               Gandhi Nagar, Bangalore
             </div>
             <div class="mt-2">
@@ -127,11 +136,13 @@
           <div class="row mb-4">
             <div class="col-12 col-md-6 mb-3 mb-md-0">
               <div class="border rounded p-2 h-100 text-center">
-                <span style="color: #800000; font-weight: bold;">Upanayanam :</span><br>
+                <span style="color: #800000; font-weight: bold;">Upanayanam :</span><br><br>
                 Wednesday, <b>04th June 2025</b><br>
                 at <b>08:15 a.m.</b><br>
                 at<br>
-                <b>Akshatha Hall - Bon Tadka</b><br>
+                <b><a href="https://maps.app.goo.gl/inCg4f621NahnH1z9?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                  Akshatha Hall - Bon Tadka
+                </a></b><br>
                 Gandhi Nagar, Bangalore
               </div>
             </div>
@@ -139,10 +150,14 @@
               <div class="border rounded p-2 h-100 text-center">
                 <span style="color: #800000; font-weight: bold;">Satyanarayana Vratam<br>& Reception :</span><br>
                 Friday, <b>06th June 2025</b><br>
-                from <b>05:00 p.m.</b> onwards at<br>
-                2nd Floor, <b>VR Ashoka Grand</b>,<br>
-                Allwyn X Roads, Miyapur,<br>
-                Hyderabad
+                from <b>05:00 p.m.</b> onwards<br>
+                at<br>
+                2nd Floor, <b>
+                  <a href="https://maps.app.goo.gl/mb6w9eVjxh8X5WK76?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                    VR Ashoka Grand
+                  </a>
+                </b>,<br>
+                Allwyn X Roads, Miyapur, Hyderabad
               </div>
             </div>
           </div>
@@ -159,7 +174,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+  <!-- <script>
     // Auto-scroll after image loads and 2s delay
     console.log('Image loading...');
     document.getElementById('mainWeddingImage').addEventListener('load', function() {
@@ -168,6 +183,6 @@
         console.log('Image loaded and scrolled to info section');
       }, 2000);
     });
-  </script>
+  </script> -->
 </body>
 </html>
