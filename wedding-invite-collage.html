@@ -22,6 +22,16 @@
 		.vh-100-all {
 			height: 100vh;
 		}
+		/* Collage image styles */
+		.collage-img {
+			width: 50%;
+			height: 100%;
+			object-fit: cover;
+		}
+		/* Each row is 1/3 of the column height */
+		.d-flex.flex-row.flex-fill {
+			height: 33.3333%;
+		}
 		.scroll-down-btn {
 			position: absolute;
 			bottom: 15%;
@@ -76,47 +86,35 @@
 <body>
 	<div class="container-fluid p-0">
 		<div class="row gx-0">
-			<!-- Image Slideshow Column -->
+			<!-- Image Collage Column -->
 			<div class="col-md-6 position-relative vh-100-all">
 				<!-- Title overlay for mobile -->
 				<div class="d-block d-md-none position-absolute top-0 start-0 w-100 text-center" style="background:rgba(0,0,0,0.5);color:#fff;padding:1.2rem 0 0.7rem 0;z-index:2;">
 					<div style="font-family: cursive; font-size: 2rem; font-weight: bold; letter-spacing: 1px;">
 						Wedding Invitation
 					</div>
+					<!-- <div style="font-size: 1.1rem; margin-top: 0.5rem;">
+						Chi. Anirudh &amp; Chi. La. Sow. Chaitra
+					</div> -->
 				</div>
-				<!-- Carousel for images -->
-				<!-- Scroll down 2 sec after 1st image loads -->
-				<div id="weddingCarousel" class="carousel slide h-100 w-100 position-absolute top-0 start-0" data-bs-ride="carousel" style="z-index:1;">
-					<div class="carousel-inner h-100">
-						<div class="carousel-item active h-100">
-							<img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 1" onload="setTimeout(function(){document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });}, 2000);">
+				<!-- Collage of 6 images (3 rows x 2 columns) -->
+				<div class="h-100 w-100 position-absolute top-0 start-0" style="z-index:1;">
+					<div class="d-flex flex-column h-100">
+						<div class="d-flex flex-row flex-fill">
+							<img src="marriage_images/image1.jpg" class="object-fit-cover collage-img" alt="Wedding 1">
+							<img src="marriage_images/image2.jpg" class="object-fit-cover collage-img" alt="Wedding 2">
 						</div>
-						<div class="carousel-item h-100">
-							<img src="marriage_images/image2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 2">
+						<div class="d-flex flex-row flex-fill">
+							<img src="marriage_images/image3.jpg" class="object-fit-cover collage-img" alt="Wedding 3">
+							<img src="marriage_images/image4.jpg" class="object-fit-cover collage-img" alt="Wedding 4">
 						</div>
-						<div class="carousel-item h-100">
-							<img src="marriage_images/image3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 3">
+						<div class="d-flex flex-row flex-fill">
+							<img src="marriage_images/image5.jpg" class="object-fit-cover collage-img" alt="Wedding 5">
+							<img src="marriage_images/image6.jpg" class="object-fit-cover collage-img" alt="Wedding 6">
 						</div>
-						<div class="carousel-item h-100">
-							<img src="marriage_images/image4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 4">
-						</div>
-						<!-- <div class="carousel-item h-100">
-							<img src="marriage_images/image5.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 5">
-						</div>
-						<div class="carousel-item h-100">
-							<img src="marriage_images/image6.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Wedding 6">
-						</div> -->
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#weddingCarousel" data-bs-slide="prev" style="z-index:2;">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#weddingCarousel" data-bs-slide="next" style="z-index:2;">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
-				<button class="scroll-down-btn" style="z-index:3;" onclick="document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });">
+				<button class="scroll-down-btn" style="z-index:2;" onclick="document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });">
 					Scroll Down ▼
 				</button>
 			</div>
