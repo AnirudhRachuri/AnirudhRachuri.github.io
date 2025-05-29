@@ -21,7 +21,7 @@ def compress_under_size(size, file_path):
         print(f"Compressing {file_path} to {quality}% quality")
         compress_pic(file_path, quality)
         current_size = os.stat(file_path).st_size
-        quality -= 10
+        quality -= 5
 
 
 def compress_pic(file_path, qual):
