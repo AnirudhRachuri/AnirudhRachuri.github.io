@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation: Anirudh & Chaitra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Social: Open Graph -->
+  <meta property="og:title" content="Wedding Invitation: Anirudh & Chaitra"/>
+  <meta property="og:description" content="Save the dates: Wedding - June 5, 2025, 8 AM, Bangalore. Reception - June 6, 2025, 7 PM, Hyderabad. Your presence makes it special!"/>
+  <meta property="og:image" content="https://anirudh.rachuri.dev/marriage_images/og_image.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://anirudh.rachuri.dev/wedding-invite.html"/>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    .vh-100-all {
+      height: 100vh;
+    }
+    .scroll-down-btn {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: none;
+      animation: scroll-flash 3s linear infinite;
+    }
+    @keyframes scroll-flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.1; }
+    }
+    @media (max-width: 767.98px) {
+      .scroll-down-btn {
+        display: block;
+      }
+      /* Remove fixed height and scrolling on mobile */
+      .scrollable-column {
+        height: auto !important;
+        overflow-y: visible !important;
+      }
+    }
+    .object-fit-cover {
+      object-fit: cover;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 3rem;
+      height: 3rem;
+      background-size: 100% 100%;
+      filter: drop-shadow(0 0 4px #000);
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 1;
+    }
+    @media (min-width: 768px) {
+      .scrollable-column {
+        overflow-y: auto;
+        height: 100vh;
+        align-items: flex-start !important; /* Prevent vertical centering so content starts at the top */
+        justify-content: flex-start !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <div class="row gx-0">
+      <!-- Image Slideshow Column -->
+      <div class="col-md-6 position-relative vh-100-all">
+        <!-- Title overlay for mobile -->
+        <div class="d-block d-md-none position-absolute top-0 start-0 w-100 text-center" style="background:rgba(0,0,0,0.5);color:#fff;padding:1.2rem 0 0.7rem 0;z-index:2;">
+          <div style="font-family: cursive; font-size: 2rem; font-weight: bold; letter-spacing: 1px;">
+            Wedding Invitation
+          </div>
+          <!-- <div style="font-size: 1.1rem; margin-top: 0.5rem;">
+            Chi. Anirudh &amp; Chi. La. Sow. Chaitra
+          </div> -->
+        </div>
+        <img src="marriage_images/image1.jpg" class="d-block w-100 h-100 object-fit-cover" 
+          alt="Wedding" style="position: absolute; top: 0; left: 0;" id="mainWeddingImage"
+          onload="setTimeout(function(){document.getElementById('infoSection').scrollIntoView({ 
+          behavior: 'smooth' });}, 2000);">
+        <button class="scroll-down-btn" onclick="document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });">
+          Scroll Down ▼
+        </button>
+      </div>
+
+      <!-- Text and Links Column -->
+      <div class="col-md-6 d-flex flex-column justify-content-center align-items-center p-4 scrollable-column" id="infoSection" style="background-color:#fffbea;">
+        <!-- fff2b8 fcf6da -->
+        <div class="w-100" style="background-color: #fffbea;">
+          <header class="text-center mb-4">
+            <br>
+            <div class="mb-2" style="font-family: serif; color: #800000;">
+              <span style="margin-right: 1em;">Swasthu</span>
+              <span style="margin-right: 1em;">Subhamasthu</span>
+              <span>Aayushmanasthu</span>
+            </div>
+            <h1 class="display-5" style="color: #008060; font-family: cursive;">Wedding Invitation</h1>
+            <p class="mt-3" style="font-size: 1.1rem;">
+                We solicit your gracious presence with family and friends
+                <span class="d-none d-md-inline"><br></span>
+                on the auspicious occasion of the marriage of our elder son
+            </p>
+            <h2 class="my-3" style="color: #008060; font-family: cursive;"><b>Chi. Anirudh</b></h2>
+            <span style="font-size: 1.2rem;">with</span>
+            <h2 class="my-3" style="color: #008060; font-family: cursive;"><b>Chi. La. Sow. Chaitra</b></h2>
+            <div style="font-size: 1rem;">
+              (Only D/o. Sri Balaji Thirupathi Ashwathanarayana,<br>
+              Smt. Geetha Vanishree Thirupathi Balaji, Bangalore)
+            </div>
+          </header>
+
+          <div class="text-center mb-4">
+            <h3 class="h5" style="color: #800000;">Sumuhurtham :</h3>
+            <div>
+              <b>Thursday, 05th June 2025 at 08:06 a.m.</b><br>
+              Hastha Nakshatram, "Mithuna Lagna"
+              <br>
+              <a href="#" onclick="alert('Live stream link will be updated later.'); return false;" style="color:#008060;text-decoration:underline;font-weight:bold;">
+                Watch Live Stream
+              </a>
+            </div>
+            <div class="mt-2">
+              <span style="color: #800000; font-weight: bold;">Venue :</span><br>
+              <b>
+                <a href="https://maps.app.goo.gl/inCg4f621NahnH1z9?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                  Akshatha Hall - Bon Tadka
+                </a>
+              </b><br>
+              Gandhi Nagar, Bangalore
+            </div>
+            <div class="mt-2">
+              <b>Lunch :</b> 12:00 noon onwards
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+              <div class="border rounded p-2 h-100 text-center">
+                <span style="color: #800000; font-weight: bold;">Upanayanam :</span><br><br>
+                Wednesday, <b>04th June 2025</b><br>
+                at <b>08:15 a.m.</b><br>
+                at<br>
+                <b><a href="https://maps.app.goo.gl/inCg4f621NahnH1z9?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                  Akshatha Hall - Bon Tadka
+                </a></b><br>
+                Gandhi Nagar, Bangalore
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="border rounded p-2 h-100 text-center">
+                <span style="color: #800000; font-weight: bold;">Satyanarayana Vratam<br>& Reception :</span><br>
+                Friday, <b>06th June 2025</b><br>
+                from <b>05:00 p.m.</b> onwards<br>
+                at<br>
+                2nd Floor, <b>
+                  <a href="https://maps.app.goo.gl/mb6w9eVjxh8X5WK76?g_st=aw" target="_blank" rel="noopener" style="color:#008060;text-decoration:underline;">
+                    VR Ashoka Grand
+                  </a>
+                </b>,<br>
+                Allwyn X Roads, Miyapur, Hyderabad
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mb-3" style="color: #008060; font-size: 1.1rem;">
+            <b>Sri Rachuri Rama Krishna Rao<br>Smt. Nirmala</b>
+          </div>
+          <div class="text-center" style="font-size: 1rem;">
+            With best compliments from <span style="color: #008060; font-weight: bold;">Sri Pramodh</span>, Near & Dear
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    // Auto-scroll after image loads and 2s delay
+    console.log('Image loading...');
+    document.getElementById('mainWeddingImage').addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('infoSection').scrollIntoView({ behavior: 'smooth' });
+        console.log('Image loaded and scrolled to info section');
+      }, 2000);
+    });
+  </script> -->
+</body>
+</html>
